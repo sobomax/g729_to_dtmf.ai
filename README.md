@@ -1,3 +1,5 @@
+# G.729 to DTMF AI
+
 ## About
 
 This project is set out to explore the possibility of applying deep learning
@@ -5,6 +7,10 @@ and (R)NN to detect various features in industry-standard speech low-bitrate
 codecs (such as ITU-T's G.729[ab] for example) while operating on codec data
 directly, without decoding the audio and then applying MFCC conversion to raw
 audio data.
+
+The goal is to build a usable pre-trained ML model and set of simple
+transformations allowing to process stream of G.729 frames and output DTMF
+codes with minimal latency and maximal accuracy.
 
 ## Who?
 
