@@ -49,5 +49,5 @@ cd rtpproxy
  sudo make -C makeann install
 cd -
 
-apt update -y
-apt install sox
+sudo apt update -y
+sudo apt install sox
