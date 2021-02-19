@@ -17,9 +17,22 @@ codes with minimal latency and maximal accuracy.
 - Maksym Sobolyev <sobomax@sippysoft.com>
 - Giovanni Maruzzelli <gmaruzz@opentelecom.it>
 
+## Plan of the Attack
+
+[x] Generate some sample data
+[ ] Build visual representation of the G.729 coefficients as function of time
+[ ] Apply our natural NNs (i.e. visual cortexes) to spot any patterns
+[ ] Apply our neo cortexes and programming skills to massage data to make
+    patterns more obvious
+[ ] Build a neural net to detect those patterns
+[ ] Test, train
+[ ] Rinse and Repeat
+[ ] Profit?
+
 ## Links
 
 - http://practicalcryptography.com/miscellaneous/machine-learning/guide-mel-frequency-cepstral-coefficients-mfccs/
 - https://arxiv.org/pdf/1410.7455v4.pdf
 - https://github.com/jameslyons/python_speech_features
 - http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.185.1908&rep=rep1&type=pdf
+- https://www.audiocheck.net/audiocheck_dtmf.php
