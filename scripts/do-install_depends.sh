@@ -28,3 +28,11 @@ touch NEWS AUTHORS ChangeLog bcg729.spec.in # Hello, automake! :)
 make
 sudo make install
 cd -
+
+git clone -b master https://github.com/sippy/rtpproxy.git
+git -C rtpproxy submodule update --init --recursive
+cd rtpproxy
+./configure
+make -C makeann
+sudo make -C makeann install
+cd -
