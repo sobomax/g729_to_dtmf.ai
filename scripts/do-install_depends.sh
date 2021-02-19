@@ -33,7 +33,7 @@ git clone -b master https://github.com/sippy/rtpproxy.git
 git -C rtpproxy submodule update --init --recursive
 cd rtpproxy
 ./configure
-for dif in libexecinfo makeann
+for dir in libexecinfo makeann
 do
   make -C "${dir}"
 done
