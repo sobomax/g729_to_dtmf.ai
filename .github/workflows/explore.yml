@@ -40,3 +40,6 @@ jobs:
 
       - name: Install Depends
         run: sh -x scripts/do-install_depends.sh
+
+      - name: Explore
+        run: sh -x scripts/do-explore.sh
