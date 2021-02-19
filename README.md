@@ -22,7 +22,8 @@ codes with minimal latency and maximal accuracy.
  - [x] Generate some sample data
  - [ ] Build visual representation of the G.729 coefficients as function of time
  - [ ] Apply our natural NNs (i.e. visual cortexes) to spot any patterns
- - [ ] Apply our neo cortexes and programming skills to massage data to make patterns more obvious
+ - [ ] Apply our neo cortexes, prior art (i.e. MFCC itself) and programming skills
+       to massage data to make patterns more obvious
  - [ ] Build a neural net to detect those patterns
  - [ ] Test, train
  - [ ] Rinse and Repeat
