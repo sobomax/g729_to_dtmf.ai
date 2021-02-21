@@ -52,4 +52,6 @@ cd -
 sudo apt update -y
 sudo apt install sox
 
+${PYTHON_CMD} -m pip install pipenv
 ${PYTHON_CMD} -m pipenv install
+
