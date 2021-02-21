@@ -42,15 +42,19 @@ if __name__ == '__main__':
     ofname = ifname.rsplit('.', 1)[0] + '.png'
     data = read_g729(ifname)
 
-    ndata = np.transpose(np.array(data))
+    b10 = [x for x in b'\xff' * 10]
+    maxvals = np.array(parametersBitStream2Array(b10))
+    ndata = np.array(data)
+    print(maxvals)
+    normalized_array = ndata / maxvals
+    print(normalized_array)
+
+    ndata = np.transpose(normalized_array)
 
     fig = plt.figure()
     ax = fig.add_subplot(111)
 
-    sum_of_rows = ndata.sum(axis=1)
-    normalized_array = ndata / sum_of_rows[:, np.newaxis]
-
-    ax.imshow(normalized_array, cmap='rainbow', interpolation='nearest')
+    ax.imshow(ndata, cmap='rainbow', interpolation='nearest')
     forceAspect(ax, aspect=4)
     fig.savefig(ofname, bbox_inches='tight', dpi=300)
     print('%s generated' % (ofname,))
