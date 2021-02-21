@@ -5,3 +5,5 @@ deps
 *.3
 *.8
 *.9
+*.png
+Pipfile.lock
