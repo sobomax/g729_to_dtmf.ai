@@ -43,3 +43,9 @@ jobs:
 
       - name: Explore
         run: sh -x scripts/do-explore.sh
+
+      - name: Archive results
+        uses: actions/upload-artifact@v2
+        with:
+          name: visual_bitstream_representation
+          path: dtmf_2021_H_02_H_18.png
