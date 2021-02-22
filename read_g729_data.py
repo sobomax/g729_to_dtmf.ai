@@ -55,7 +55,7 @@ if __name__ == '__main__':
     fig = plt.figure()
     ax = fig.add_subplot(111)
 
-    ax.imshow(ndata, cmap='rainbow', interpolation='nearest')
+    ax.imshow(ndata, cmap='gray', interpolation='nearest')
     forceAspect(ax, aspect=(4 * nframes / 600))
     fig.savefig(ofname, bbox_inches='tight', dpi=300)
     print('%s generated' % (ofname,))
