@@ -41,6 +41,7 @@ if __name__ == '__main__':
     ifname = sys.argv[1]
     ofname = ifname.rsplit('.', 1)[0] + '.png'
     data = read_g729(ifname)
+    nframes = len(data)
 
     b10 = [x for x in b'\xff' * 10]
     maxvals = np.array(parametersBitStream2Array(b10))
@@ -55,6 +56,6 @@ if __name__ == '__main__':
     ax = fig.add_subplot(111)
 
     ax.imshow(ndata, cmap='rainbow', interpolation='nearest')
-    forceAspect(ax, aspect=4)
+    forceAspect(ax, aspect=(4 * nframes / 600))
     fig.savefig(ofname, bbox_inches='tight', dpi=300)
     print('%s generated' % (ofname,))
