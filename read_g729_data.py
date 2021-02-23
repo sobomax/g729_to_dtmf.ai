@@ -46,9 +46,9 @@ if __name__ == '__main__':
     b10 = [x for x in b'\xff' * 10]
     maxvals = np.array(parametersBitStream2Array(b10))
     ndata = np.array(data)
-    print(maxvals)
+    #print(maxvals)
     normalized_array = ndata / maxvals
-    print(normalized_array)
+    #print(normalized_array)
 
     ndata = np.transpose(normalized_array)
 
