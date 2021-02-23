@@ -3,7 +3,7 @@
 set -e
 
 BASEDIR="`dirname "${0}"`/.."
-#. "${BASEDIR}/scripts/functions.sub"
+. "${BASEDIR}/scripts/functions.sub"
 
 for infile in ${BASEDIR}/training_set/*.wav
 do

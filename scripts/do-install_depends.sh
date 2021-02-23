@@ -3,7 +3,7 @@
 set -e
 
 BASEDIR="`dirname "${0}"`/.."
-#. "${BASEDIR}/scripts/functions.sub"
+. "${BASEDIR}/scripts/functions.sub"
 
 BCG729_VER=1.1.1
 #SNDFILE_VER=1.0.28
