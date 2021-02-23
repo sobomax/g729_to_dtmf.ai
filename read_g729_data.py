@@ -32,6 +32,13 @@ def read_g729(fname):
         res.append(parametersBitStream2Array(bytes))
     return res
 
+_b10 = [x for x in b'\xff' * 10]
+_maxvals = np.array(parametersBitStream2Array(_b10))
+
+def read_g729_norm(fname):
+    ndata = np.array(read_g729(fname))
+    return ndata / _maxvals
+
 def forceAspect(ax,aspect):
     im = ax.get_images()
     extent =  im[0].get_extent()
@@ -40,15 +47,8 @@ def forceAspect(ax,aspect):
 if __name__ == '__main__':
     ifname = sys.argv[1]
     ofname = ifname.rsplit('.', 1)[0] + '.png'
-    data = read_g729(ifname)
-    nframes = len(data)
-
-    b10 = [x for x in b'\xff' * 10]
-    maxvals = np.array(parametersBitStream2Array(b10))
-    ndata = np.array(data)
-    #print(maxvals)
-    normalized_array = ndata / maxvals
-    #print(normalized_array)
+    normalized_array = read_g729_norm(ifname)
+    nframes = len(normalized_array)
 
     ndata = np.transpose(normalized_array)
 
