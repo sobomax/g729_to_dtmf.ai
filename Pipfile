@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 numpy = "*"
 matplotlib = "*"
+tensorflow = "*"
+pydot = "*"
 
 [dev-packages]
 
