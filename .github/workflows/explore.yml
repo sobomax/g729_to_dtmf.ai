@@ -44,8 +44,13 @@ jobs:
       - name: Explore
         run: sh -x scripts/do-explore.sh
 
+      - name: Generate Training Set
+        run: sh -x scripts/do-gen_train_set.sh
+
       - name: Archive results
         uses: actions/upload-artifact@v2
         with:
           name: visual_bitstream_representation
-          path: ./**/*.png
+          path: |
+            ./**/*.png
+            training_data/
