@@ -53,4 +53,3 @@ jobs:
           name: visual_bitstream_representation
           path: |
             ./**/*.png
-            training_data/
